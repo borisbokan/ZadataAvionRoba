@@ -16,7 +16,7 @@ public class Avion {
     public static final String POLJE_OZNAKA= "oznaka";
     public static final String POLJE_RASPON_KRILA ="raspon_krila";
 
-    @DatabaseField(columnName = "id",generatedId = true)
+    @DatabaseField(generatedId = true)
     private int id;
     @DatabaseField(columnName = POLJE_OZNAKA,canBeNull = false)
     private String oznaka;

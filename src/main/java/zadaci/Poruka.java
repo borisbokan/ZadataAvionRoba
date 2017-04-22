@@ -19,4 +19,11 @@ public class Poruka {
             System.out.println();
         }
 
+
+    /**
+     * Nov red + isprekidana linija + nov red
+     */
+    public static void nrlinr(){
+            System.out.println("\n----------------------------------------\n");
+        }
 }

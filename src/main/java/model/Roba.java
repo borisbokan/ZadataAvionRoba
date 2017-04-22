@@ -24,7 +24,7 @@ public class Roba {
     private double tezina;
 
     //VEZA sa avionom
-    @DatabaseField(foreign =true,foreignAutoRefresh = true,canBeNull = false)
+    @DatabaseField(foreign =true,foreignAutoRefresh = true,canBeNull = true)
     private Avion avionn;
 
     

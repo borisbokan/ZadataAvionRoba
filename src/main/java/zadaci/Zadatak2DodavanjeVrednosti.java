@@ -51,6 +51,7 @@ public class Zadatak2DodavanjeVrednosti {
 
             Roba[]  artikli={artikal1,artikal2,artikal3,artikal4,artikal5};
 
+            Poruka.noviRed();
             Poruka.linija40();
             Poruka.text("Unosim robu....");
             //Unosim podatke robe u bazu podataka
