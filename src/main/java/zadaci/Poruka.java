@@ -5,17 +5,17 @@ package zadaci;
  */
 public class Poruka {
 
-        public synchronized static void text(String _sadrzajPoruke){
+        public  static void text(String _sadrzajPoruke){
             System.out.println(_sadrzajPoruke);
         }
 
 
-        public synchronized static void linija40(){
+        public  static void linija40(){
             System.out.println("----------------------------------------");
         }
 
 
-        public synchronized static void noviRed(){
+        public static void noviRed(){
             System.out.println();
         }
 

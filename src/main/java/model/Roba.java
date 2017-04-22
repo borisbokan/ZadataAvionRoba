@@ -21,16 +21,16 @@ public class Roba {
     @DatabaseField(columnName=POLJE_OPIS,canBeNull = false)
     private String opis;
     @DatabaseField(columnName=POLJE_TEZINA,canBeNull = false)
-    private int tezina;
+    private double tezina;
 
     //VEZA sa avionom
     @DatabaseField(foreign =true,foreignAutoRefresh = true,canBeNull = false)
-    Avion avionn;
+    private Avion avionn;
 
     
     public Roba(){ }
 
-    public Roba(String _naziv,String _opis,int _tezina){
+    public Roba(String _naziv,String _opis,double _tezina){
         this.naziv= _naziv;
         this.opis=_opis;
         this.tezina=_tezina;
@@ -62,11 +62,11 @@ public class Roba {
         this.opis = opis;
     }
 
-    public int getTezina() {
+    public double getTezina() {
         return tezina;
     }
 
-    public void setTezina(int tezina) {
+    public void setTezina(double tezina) {
         this.tezina = tezina;
     }
 
