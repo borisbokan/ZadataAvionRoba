@@ -1,7 +1,9 @@
 package model;
 
+import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.dao.ForeignCollection;
 import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 
 /**
@@ -21,14 +23,15 @@ public class Avion {
     @DatabaseField(columnName = POLJE_RASPON_KRILA,canBeNull = false)
     private int rasponKrila;
 
-    //TODO: napraviti vezu jedan na prema vise kada se uradi class Roba
-    //ForeignCollection<Roba> robe  i dodati get i set za istu kolekciju
+   @ForeignCollectionField(foreignFieldName = "avionn")
+     ForeignCollection<Roba> robe;
 
 
 
     public Avion(){}
 
     public Avion(String _oznaka,int _rasponKrila){
+            
             this.oznaka=_oznaka;
             this.rasponKrila=_rasponKrila;
     }
@@ -58,6 +61,13 @@ public class Avion {
         this.rasponKrila = rasponKrila;
     }
 
+    public ForeignCollection<Roba> getRobe() {
+        return robe;
+    }
+
+    public void setRobe(ForeignCollection<Roba> robe) {
+        this.robe = robe;
+    }
 
     public String toString(){
         return " >ID:" +this.id + " - Oznaka Av." + this.getOznaka() + " - " + "Raspon: " +this.rasponKrila;
