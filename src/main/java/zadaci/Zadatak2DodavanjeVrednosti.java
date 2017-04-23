@@ -30,7 +30,14 @@ public class Zadatak2DodavanjeVrednosti {
 
             //Instanciranje Aviona
             Avion avion1=new Avion("Avion1",34);
+            DAOAvion.create(avion1);
+
             Avion avion2=new Avion("Avion2",21);
+            DAOAvion.create(avion2);
+
+
+
+
 
 
             //Instanciranje roba sa avionima
